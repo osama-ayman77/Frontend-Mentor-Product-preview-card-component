@@ -1,0 +1,139 @@
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-margin:30px;
+}
+@media (max-width:767px) {
+  :root {
+    --main-margin: 20px;
+  }
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: hsl(30, 38%, 92%);
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 30px auto;
+  padding: 0 30px;
+}
+@media (max-width:767px) {
+  .container {
+    margin: 30px auto;
+    padding: 0 0;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 750px;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+  }
+}
+@media (max-width: 375px) {
+  .grid {
+    width: 350px;
+  }
+}
+.grid .image .desktop-img{
+  max-width: 100%;
+  display: inherit;
+  overflow: hidden;
+}
+.grid .image .mobile-img {
+  display: none;
+}
+@media (max-width: 767px) {
+  .grid .image .desktop-img{
+    display: none;
+  }
+  .grid .image .mobile-img {
+    max-width: 100%;
+    display: inherit;
+    overflow: hidden
+  }
+}
+.container .content {
+  padding: 40px 40px;
+}
+.container .content h6 {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: var(--main-margin);
+}
+.container .content h2 {
+  font-size: 40px;
+  padding-bottom: var(--main-margin);
+  font-family: 'Fraunces', serif;
+  line-height: 1;
+}
+.container .content p {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--main-margin);
+  line-height: 2;
+}
+.container .content .price {
+  margin-bottom: var(--main-margin);
+  display: flex;
+  align-items: center;
+}
+.container .content .price .current-price{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+  padding-right: 10px;
+  color: hsl(158, 36%, 37%);
+}
+.container .content .price .old-price{
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+.container .content button {
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  padding: 20px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container .content button:hover {
+  background-color: hsl(157, 36%, 24%)
+}
+.container .content button .icon {
+  margin-right: 10px;
+  width: 17px;
+}
+
